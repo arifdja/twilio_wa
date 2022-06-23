@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "Hello World!2"
 
 @app.route('/bot', methods=['POST'])
 def bot():
