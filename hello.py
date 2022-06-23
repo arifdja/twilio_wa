@@ -24,7 +24,7 @@ def bot():
 
     if 'A' in incoming_msg:
         # return total cases
-        r = requests.get('https://coronavirus-19-api.herokuapp.com/all')
+        r = requests.get('https://twiliowa.herokuapp.com/all')
         if r.status_code == 200:
             data = r.json()
             text = f'_Covid-19 Cases Worldwide_ \n\nConfirmed Cases : *{data["cases"]}* \n\nDeaths : *{data["deaths"]}* \n\nRecovered : *{data["recovered"]}*  \n\n 👉 Type *B* to check cases in *India* \n 👉 Type *B, C, D, E, F, G* to see other options \n 👉 Type *Menu* to view the Main Menu'
@@ -36,7 +36,7 @@ def bot():
 
     if 'B' in incoming_msg or 'India' in incoming_msg:
         # return cases in india
-        r = requests.get('https://coronavirus-19-api.herokuapp.com/countries/india')
+        r = requests.get('https://twiliowa.herokuapp.com/countries/india')
         if r.status_code == 200:
             data = r.json()
             text = f'_Covid-19 Cases in India_ \n\nConfirmed Cases : *{data["cases"]}* \n\nToday Cases : *{data["todayCases"]}* \n\nDeaths : *{data["deaths"]}* \n\nRecovered : *{data["recovered"]}* \n\n 👉 Type *C* to check cases in *China* \n 👉 Type *A, C, D, E, F, G* to see other options \n 👉 Type *Menu* to view the Main Menu'
@@ -47,7 +47,7 @@ def bot():
 
     if 'C' in incoming_msg or 'China' in incoming_msg:
         # return cases in china
-        r = requests.get('https://coronavirus-19-api.herokuapp.com/countries/china')
+        r = requests.get('https://twiliowa.herokuapp.com/countries/china')
         if r.status_code == 200:
             data = r.json()
             text = f'_Covid-19 Cases in China_ \n\nConfirmed Cases : *{data["cases"]}* \n\nToday Cases : *{data["todayCases"]}* \n\nDeaths : *{data["deaths"]}* \n\nRecovered : *{data["recovered"]}* \n\nActive Cases : *{data["active"]}* \n\n 👉 Type *D* to check cases in *USA* \n 👉 Type *A, B, D, E, F, G* to see other options \n 👉 Type *Menu* to view the Main Menu'
@@ -58,7 +58,7 @@ def bot():
     
     if 'D' in incoming_msg or 'USA' in incoming_msg:
         # return cases in usa
-        r = requests.get('https://coronavirus-19-api.herokuapp.com/countries/usa')
+        r = requests.get('https://twiliowa.herokuapp.com/countries/usa')
         if r.status_code == 200:
             data = r.json()
             text = f'_Covid-19 Cases in USA_ \n\nConfirmed Cases : *{data["cases"]}* \n\nToday Cases : *{data["todayCases"]}* \n\nDeaths : *{data["deaths"]}* \n\nRecovered : *{data["recovered"]}* \n\nActive Cases : *{data["active"]}*  \n\n 👉 Type *E* to check cases in *Italy* \n 👉 Type *A, B, C, E, F, G* to see other options \n 👉 Type *Menu* to view the Main Menu'
@@ -69,7 +69,7 @@ def bot():
     
     if 'E' in incoming_msg or 'Italy' in incoming_msg:
         # return cases in italy
-        r = requests.get('https://coronavirus-19-api.herokuapp.com/countries/italy')
+        r = requests.get('https://twiliowa.herokuapp.com/countries/italy')
         if r.status_code == 200:
             data = r.json()
             text = f'_Covid-19 Cases in Italy_ \n\nConfirmed Cases : *{data["cases"]}* \n\nToday Cases : *{data["todayCases"]}* \n\nDeaths : *{data["deaths"]}* \n\nRecovered : *{data["recovered"]}* \n\nActive Cases : *{data["active"]}* \n\n 👉 Type *F* to check how *Covid-19 Spreads?* \n 👉 Type *A, B, C, E, F, G* to see other options \n 👉 Type *Menu* to view the Main Menu'
